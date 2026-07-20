@@ -1,0 +1,77 @@
+.dns-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.dns-results {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.dns-card {
+    border: 1px solid var(--line);
+    background: #0a1019;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dns-card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 17px;
+}
+
+.dns-type {
+    min-width: 58px;
+    color: var(--cyan);
+    font-weight: 900;
+}
+
+.dns-host {
+    flex: 1;
+    color: var(--muted);
+    font-size: .8rem;
+    overflow-wrap: anywhere;
+}
+
+.dns-state {
+    border-radius: 999px;
+    padding: 5px 9px;
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.dns-state.ok {
+    color: var(--cyan);
+    background: #39e7c21a;
+}
+
+.dns-state.missing {
+    color: #ffbf69;
+    background: #ffbf691a;
+}
+
+.dns-records {
+    margin: 0;
+    border-top: 1px solid var(--line);
+    padding: 16px;
+    color: #b9c9dd;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: auto;
+}
+
+@media (max-width: 720px) {
+    .dns-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .dns-card-head {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
